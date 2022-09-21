@@ -1,0 +1,1022 @@
+body {
+    font-family: Helvetica;
+}
+
+@font-face {
+    font-family: Helvetica;
+    src: url('../css/Helvetica-Font/Helvetica.ttf');
+    font-family: 'Apercu Mono Pro Regular';
+    src: url('../css/apercu-mono-pro-cufonfonts-webfont/ApercuMonoProRegular.woff');
+}
+
+/*header*/
+.header {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 0.9% 0;
+    background-color: #C0DBDE;
+}
+
+.header-logo {
+    margin-left: 2%;
+    width: 48%;
+}
+
+.header-nav {
+    text-align: end;
+    width: 48%;
+    margin: auto;
+}
+
+.header-nav li {
+    display: inline-flex;
+    padding-right: 2%;
+}
+
+.nav-a {
+    margin: 1% auto;
+    text-decoration: none;
+    font-weight: 600;
+    color: #000000;
+    font-size: 1.2rem;
+    padding-bottom: .6rem;
+}
+
+.nav-a:hover {
+    border-bottom: 3px solid #000000;
+}
+
+.header-nav>ul>li>a>button {
+    font-weight: bold;
+    font-size: 1.2rem;
+    height: 2.5rem;
+    color: #000000;
+    background-color: #C0DBDE;
+    border: 3px solid #000000;
+}
+
+.header-nav>ul>li>a>button:hover {
+    color: #C0DBDE;
+    background-color: #000000;
+    cursor: pointer;
+    transition: all .5s;
+    transform: scale(1.1);
+}
+
+.header-nav>ul>li>a>button:active {
+    color: #C0DBDE;
+    background-color: #000000;
+    cursor: pointer;
+    transition: all .5s;
+    transform: scale(1.1);
+}
+
+.header-nav li.dropdown {
+    display: none;
+    background-image: url('../img/gJx4x.png');
+    padding: 8%;
+    width: 1%;
+    background-size: cover;
+}
+
+.header-nav>ul>li.dropdown:hover {
+    cursor: pointer;
+}
+
+li.dropdown {
+    display: none;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #C0DBDE;
+    min-width: 10rem;
+    position: absolute;
+    right: -15%;
+    top: 100%;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown-content a:hover {
+    background-color: #000000;
+    display: block;
+    color: #C0DBDE;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*fim do header*/
+
+/*main*/
+main {
+    background: url("../img/backgroundIndex-ballon.jpg") no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+.first-section {
+    margin: -0.1% 0;
+    width: 100%;
+    height: 25rem;
+    box-sizing: border-box;
+    display: flex;
+    background: linear-gradient(-5deg, rgba(245, 244, 244, 0) 30%, #C0DBDE 70%);
+    flex-direction: row;
+}
+
+.first-section>div {
+    margin: 5% 5% 0 5%;
+}
+
+.first-section>div:nth-child(1) {
+    width: 30%;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #000000;
+    text-shadow: 2px 2px 20px rgb(255, 254, 254);
+}
+
+#select-birthday {
+    font-size: 1.6rem;
+    border: 8px solid #ffffff;
+    background-color: #C0DBDE;
+    font-family: Helvetica;
+    width: 100%;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap;
+    height: 5rem;
+}
+
+option {
+    background-color: #C0DBDE;
+    color: #000000;
+}
+
+.first-section>div:nth-child(2) {
+    width: 50%;
+    border: double 20px rgba(255, 255, 255, 0.7);
+    border-bottom-color: #000000;
+    border-top-color: #ffffff;
+    height: 6rem;
+    min-height: 6rem;
+    margin: 7% 5% 0 5%;
+    position: relative;
+    animation: border 5s 1s ease-in-out, borderColor 10s 1s ease;
+}
+
+.first-section>div:nth-child(2)::before,
+.first-section>div:nth-child(2)::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    border: 20px solid transparent;
+    width: 0;
+    height: 0;
+}
+
+@keyframes border {
+    0% {
+        width: 0;
+        height: 0;
+    }
+
+    25% {
+        width: 48%;
+        height: 5rem;
+    }
+
+    50% {
+        width: 49%;
+        height: 5.5rem;
+    }
+
+    100% {
+        width: 50%;
+        height: 6rem;
+    }
+}
+
+@keyframes borderColor {
+    0% {
+        border-bottom-color: rgba(255, 255, 255, 0.7);
+        border-top-color: rgba(255, 255, 255, 0.7);
+    }
+
+    25% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-bottom-color: #000000;
+        border-top-color: #ffffff;
+    }
+
+    100% {
+        border-bottom-color: #000000;
+        border-top-color: #ffffff;
+    }
+}
+
+.first-section>div:nth-child(2) p {
+    width: auto;
+    max-width: 100%;
+    text-align: justify;
+    font-size: 8rem;
+    color: #ffffff;
+    position: absolute;
+    top: 25%;
+    right: 1%;
+    text-shadow: 5px 5px 20px rgb(0, 0, 0);
+}
+
+#p-feliz {
+    font-weight: bold;
+    position: absolute;
+    top: -85%;
+    left: 1%;
+    text-shadow: 5px 5px 20px rgb(255, 255, 255);
+    color: #000000;
+    font-size: 9rem;
+}
+
+#second-section {
+    width: 80%;
+    margin: 0% 10%;
+}
+
+.card {
+    width: 15%;
+    height: 20rem;
+    float: left;
+    background-color: #ffffff;
+    margin: 2% 1%;
+    position: relative;
+    box-shadow: 5px 5px 5px black;
+    transition: 1s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition: all .3s;
+    box-shadow: 15px 25px 50px black;
+}
+
+.description-photo {
+    font-family: 'Apercu Mono Pro Regular';
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 0 10% 0;
+    text-align: start;
+    position: absolute;
+    top: 82%;
+    left: 5%;
+}
+
+.data-nascimento {
+    font-family: 'Apercu Mono Pro Regular';
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 0 10% 0;
+    position: absolute;
+    text-align: start;
+    top: 93%;
+    left: 5%;
+}
+
+.img {
+    position: absolute;
+    width: 90%;
+    height: 15rem;
+    top: 5%;
+    left: 5%;
+    object-fit: cover;
+    object-position: 50% 20%;
+}
+
+img:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    height: calc(96% + 10px);
+    width: 100%;
+    background-image: url(../img/faces/disposicao-da-vista-superior-com-um-cartao-emoji-sorridente_23-2148860301.jpg);
+    background-size: cover;
+    background-position: 50% 30%;
+}
+
+.div-sem-aniver {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.div-sem-aniver h1 {
+    padding: 1%;
+    margin-bottom: 5%;
+    color: red;
+    font-size: 2rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.div-sem-aniver img {
+    width: 50%;
+    margin: auto 23%;
+    border: 20px solid #ffffff;
+}
+
+.div-para-erro {
+    margin: -2% 20% 3%;
+}
+
+.div-para-erro h1 {
+    padding: 1%;
+    margin-bottom: 5%;
+    color: red;
+    font-size: 2rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.div-para-erro img {
+    width: 50%;
+    margin: auto 23%;
+    border: 20px solid #ffffff;
+}
+
+#month-section {
+    display: none;
+}
+
+.month-card {
+    width: 12.6%;
+    height: 20rem;
+    float: left;
+    background-color: #ffffff;
+    margin: 2% 10%;
+    position: relative;
+    box-shadow: 5px 5px 5px black;
+    transition: 1s;
+}
+
+.month-card:hover {
+    transform: scale(1.1);
+    transition: all .3s;
+    box-shadow: 15px 25px 50px black;
+}
+
+.month-card img {
+    background-color: #000000;
+    position: absolute;
+    width: 90%;
+    height: 15rem;
+    top: 5%;
+    left: 5%;
+    object-fit: cover;
+    object-position: 50% 20%;
+}
+
+#preload {
+    color: #ffffff;
+    width: 50%;
+    font-size: 5rem;
+    margin: 5%;
+    font-weight: bold;
+}
+
+.div-sem-aniver-month {
+    width: 100%;
+    margin: -5% 0 10% 0;
+}
+
+.div-sem-aniver-month h1 {
+    padding: 1%;
+    width: 50%;
+    margin: 5% auto;
+    color: red;
+    font-size: 2rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.div-sem-aniver-month img {
+    width: 40%;
+    margin: auto 28%;
+    border: 20px solid #ffffff;
+}
+
+.div-para-erro {
+    margin: -2% 20% 3%;
+}
+
+.third-section {
+    background-color: #C0DBDE;
+    height: 11rem;
+    display: inline-flex;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.third-section div {
+    width: 50%;
+    margin: auto;
+}
+
+.third-section>div:first-child {
+    text-align: end;
+    margin-right: 2%;
+    margin-left: 5%;
+}
+
+.third-section>div:first-child p {
+    margin-right: 5%;
+    font-size: 1.2rem;
+}
+
+.third-section>div:last-child {
+    text-align: start;
+    margin-left: 5%;
+}
+
+.third-section>div:last-child>a>button {
+    height: 3rem;
+    max-width: 100%;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #000000;
+    background-color: #C0DBDE;
+    text-decoration: none;
+    border: 3px solid #000000;
+    cursor: pointer;
+}
+
+.third-section>div:last-child>a>button:hover {
+    color: #C0DBDE;
+    transition: all .5s;
+    background-color: #000000;
+    transform: scale(1.1);
+}
+
+/*fim do main*/
+
+/*footer*/
+footer {
+    height: 11rem;
+    background-color: #ffffff;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: 0;
+    top: 99%;
+}
+
+#footer-left {
+    width: 40%;
+    text-align: start;
+    margin: auto 5%;
+}
+
+#footer-center {
+    width: 20%;
+    height: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+    padding: 1%;
+    color: #000000;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#footer-center a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#footer-center a:disabled {
+    color: #000000;
+    cursor: pointer;
+}
+
+#footer-center a:active {
+    color: #C0DBDE;
+    cursor: pointer;
+}
+
+#footer-center a:visited {
+    color: #000000;
+}
+
+#footer-center:hover {
+    border-bottom: 3px solid #000000;
+}
+
+#footer-right {
+    width: 40%;
+    text-align: end;
+    margin: auto 5%;
+}
+
+/*fim do footer*/
+
+/*media queries*/
+@media (min-width: 770px) and (max-width: 1204px) {
+
+    .first-section>div:nth-child(1) {
+        margin: 8% 5% 0 5%;
+    }
+
+    .first-section>div:nth-child(2) {
+        height: 4rem;
+        min-height: 4rem;
+    }
+
+    .first-section>div:nth-child(2) {
+        margin: 10% 5% 0 5%;
+    }
+
+    .first-section>div:nth-child(2) p {
+        font-size: 5rem;
+        top: 35%;
+        right: -5%;
+    }
+
+    @keyframes border {
+        0% {
+            width: 0;
+            height: 0;
+        }
+
+        25% {
+            width: 45%;
+            height: 4rem;
+        }
+
+        50% {
+            width: 46%;
+            height: 4.5rem;
+        }
+
+        75% {
+            width: 47%;
+            height: 4.5rem;
+        }
+
+        100% {
+            width: 48%;
+            height: 5rem;
+        }
+    }
+
+    #select-birthday {
+        font-size: 1.3rem;
+        width: 90%;
+    }
+
+    #p-feliz {
+        top: -85%;
+        left: -5%;
+        font-size: 6rem;
+    }
+
+    #second-section {
+        padding: 0%;
+    }
+
+    .card {
+        width: 25%;
+        height: 18rem;
+        margin: 2% 2.5%;
+    }
+
+    .img {
+        height: 14rem;
+    }
+
+    .div-sem-aniver img {
+        margin: auto 21%;
+    }
+
+    #select-birthday {
+        font-size: 1.2rem;
+    }
+
+    .month-card {
+        margin: 2% 6.5%;
+        width: 20%;
+        height: 18rem;
+    }
+
+    .month-card img {
+        height: 14rem;
+    }
+
+    .description-photo {
+        font-size: .9rem;
+        top: 83%;
+    }
+
+    .data-nascimento {
+        font-size: .9rem;
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .nav-a,
+    .header-nav>ul>li:nth-child(3)>a {
+        display: none;
+    }
+
+    .header-nav>ul>li.dropdown {
+        display: inline-flex;
+    }
+
+    .first-section {
+        height: 30rem;
+        background: linear-gradient(-5deg, rgba(245, 244, 244, 0) 15%, #C0DBDE 35%);
+        flex-direction: column;
+    }
+
+    .first-section>div:nth-child(1) {
+        width: 90%;
+    }
+
+    .first-section>div:nth-child(1)>h1 {
+        margin: 5% auto;
+        text-align: center;
+        font-size: 1.6rem;
+    }
+
+    @keyframes border {
+        0% {
+            width: 0;
+            height: 0;
+        }
+
+        25% {
+            width: 78%;
+            height: 4rem;
+        }
+
+        50% {
+            width: 79%;
+            height: 4.5rem;
+        }
+
+        75% {
+            width: 80%;
+            height: 4.5rem;
+        }
+
+        100% {
+            width: 81%;
+            height: 5rem;
+        }
+    }
+
+    #select-birthday {
+        font-size: 1.3rem;
+        width: 80%;
+        margin: 1% 10%;
+        height: 4rem;
+    }
+
+    .first-section>div:nth-child(2) {
+        width: 80%;
+        background-color: #C0DBDE;
+        margin: 10% 7%;
+    }
+
+    .first-section>div:nth-child(2) {
+        height: 6rem;
+        min-height: 6rem;
+    }
+
+    .first-section>div:nth-child(2) p {
+        font-size: 5rem;
+        top: 45%;
+        right: -5%;
+    }
+
+    #p-feliz {
+        top: -55%;
+        left: -5%;
+        font-size: 6rem;
+    }
+
+    .card {
+        width: 35%;
+        height: 18rem;
+        margin: 2% 2%;
+    }
+
+    .img {
+        height: 13rem;
+    }
+
+    .div-sem-aniver h1 {
+        margin-bottom: 15%;
+    }
+
+    .div-sem-aniver img {
+        width: 80%;
+        margin: auto 5%;
+    }
+
+    .div-para-erro {
+        margin: -2% 2% 3%;
+    }
+
+    #preload {
+        font-size: 3rem;
+        margin: 10%;
+
+    }
+
+    .month-card {
+        height: 18rem;
+        width: 30%;
+        margin: 2% 1.6%;
+    }
+
+    .month-card img {
+        height: 13rem;
+    }
+
+    .description-photo {
+        font-size: .9rem;
+        top: 80%;
+    }
+
+    .data-nascimento {
+        font-size: .9rem;
+    }
+
+    .third-section div {
+        width: 40%;
+    }
+
+    .dropbtn {
+        display: block;
+    }
+}
+
+@media (max-width: 481px) {
+    .header-nav li.dropdown {
+        padding: 12%;
+    }
+
+    .nav-a,
+    .header-nav>ul>li:nth-child(3)>a {
+        display: none;
+    }
+
+    .header-nav>ul>li.dropdown {
+        display: inline-flex;
+    }
+
+    .first-section {
+        height: 30rem;
+        background: linear-gradient(-5deg, rgba(245, 244, 244, 0) 15%, #C0DBDE 35%);
+        flex-direction: column;
+    }
+
+    .first-section>div:nth-child(1) {
+        width: 90%;
+    }
+
+    #date {
+        margin: 10% 0 -5% 0%;
+    }
+
+    #select-birthday {
+        font-size: 1rem;
+        height: 5rem;
+        text-align: center;
+        width: 90%;
+        margin: 10% 5%;
+    }
+
+    .first-section>div:nth-child(2) {
+        width: 80%;
+        background-color: #C0DBDE;
+        height: 4rem;
+        min-height: 4rem;
+        margin: 5% 10%;
+    }
+
+    @keyframes border {
+        0% {
+            width: 0;
+            height: 0;
+        }
+
+        25% {
+            width: 78%;
+            height: 3.8rem;
+        }
+
+        50% {
+            width: 79%;
+            height: 3.9rem;
+        }
+
+        75% {
+            width: 80%;
+            height: 4rem;
+        }
+
+        100% {
+            width: 81%;
+            height: 4.2rem;
+        }
+    }
+
+    @keyframes borderColor {
+        0% {
+            background-color: transparent;
+        }
+
+        25% {
+            background-color: #C0DBDE;
+        }
+
+        50% {
+            background-color: #c6e9ed;
+        }
+
+        100% {
+            background-color: #C0DBDE;
+        }
+    }
+
+    .first-section>div:nth-child(2) p {
+        font-size: 2rem;
+        top: 60%;
+        right: -1%;
+    }
+
+    #p-feliz {
+        top: -15%;
+        left: -1%;
+        font-size: 2.5rem;
+    }
+
+    #preload {
+        font-size: 2rem;
+        margin: 5%;
+    }
+
+    .card {
+        width: 88%;
+        margin: 10% 0%;
+        height: 23rem;
+    }
+
+    .second-section {
+        display: block;
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    .img {
+        height: 18rem;
+    }
+
+    .div-sem-aniver {
+        width: 100%;
+    }
+
+    .div-sem-aniver h1 {
+        font-size: 1.3rem;
+        margin-bottom: 10%;
+    }
+
+    .div-sem-aniver img {
+        width: 92%;
+        margin: auto -2%;
+    }
+
+
+    .div-para-erro {
+        margin: -2% 4% 3%;
+    }
+
+    .div-para-erro h1 {
+        padding: .5%;
+        font-size: 1.3rem;
+    }
+
+    .div-para-erro img {
+        width: 60%;
+        margin: auto 15%;
+    }
+
+    .month-card {
+        height: 18rem;
+        width: 70%;
+        margin: 2% 15%;
+    }
+
+    .month-card img {
+        height: 14rem;
+    }
+
+    .div-sem-aniver-month {
+        margin: -5% 0 10% 0;
+    }
+
+    .div-sem-aniver-month h1 {
+        width: 80%;
+        font-size: 1.3rem;
+        background-color: #ffffff;
+    }
+
+    .div-sem-aniver-month img {
+        width: 60%;
+        margin: auto 15%;
+    }
+
+    .description-photo {
+        font-size: .9rem;
+        top: 85%;
+    }
+
+    .data-nascimento {
+        font-size: .9rem;
+    }
+
+    .first-section {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .first-section>div {
+        width: 90%;
+    }
+
+    .first-section>div:nth-child(1)>h1,
+    h2 {
+        margin: 3% 0;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .first-section>div:nth-child(2) {
+        font-size: 1rem;
+        margin: 2% auto;
+    }
+
+    .third-section {
+        width: 100%;
+        display: inline-block;
+    }
+
+    .third-section div {
+        width: 90%;
+        margin: 5% auto;
+    }
+
+    .third-section div p {
+        text-align: center;
+    }
+
+    .third-section>div:last-child button {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .third-section>div:last-child {
+        width: 80%;
+        margin: 10%;
+    }
+
+    footer p {
+        font-size: .8rem;
+    }
+}
+
+/*media queries*/

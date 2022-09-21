@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    min-height: 100%;
+    background-color: #ffffff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: #ffffff;
+}
+
+/*header*/
+.header-nav>ul>li:first-child>a {
+    padding-bottom: .6rem;
+}
+
+.header-nav>ul>li:nth-child(2)>a {
+    text-decoration: none;
+    width: 100%;
+    font-weight: 600;
+    color: #000000;
+    font-size: 1.2rem;
+    padding-bottom: .6rem;
+}
+
+.header-nav>ul>li:nth-child(2)>a:hover {
+    border-bottom: 3px solid #000000;
+}
+
+/*fim do header*/
+
+/*main*/
+main {
+    height: 100vh;
+    background: -webkit-linear-gradient(-20deg, #ffffff 50%, #C0DBDE 50%);
+    background: -o-linear-gradient(-20deg, #ffffff 50%, #C0DBDE 50%);
+    background: -moz-linear-gradient(-20deg, #ffffff 50%, #C0DBDE 50%);
+    background: linear-gradient(-20deg, #ffffff 50%, #C0DBDE 50%);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 5%;
+}
+
+.form-section {
+    border: 20px solid #ffffff;
+    background-color: #C0DBDE;
+    width: 30%;
+    margin: 0 auto 10%;
+    height: auto;
+}
+
+form {
+    padding: 5%;
+}
+
+.form-section input {
+    display: block;
+    width: 80%;
+    margin: 2% auto;
+    height: 3rem;
+    border: 1px solid #000000;
+}
+
+span.input-mensagem-erro {
+    color: #df2525;
+    text-align: center;
+    margin: 0 0 0 10%;
+    width: 100%;
+}
+
+.input-container--invalido input {
+    border: 1px solid #df2525;
+}
+
+input:active,
+input:focus {
+    border: 3px solid rgb(203, 242, 249);
+}
+
+#image {
+    border: none;
+}
+
+#image::-webkit-file-upload-button {
+    visibility: hidden;
+    margin: 3% 0 0 1%;
+    width: 5%;
+}
+
+#image::before {
+    border: 1px solid #000000;
+    content: 'Escolha uma foto';
+    background-color: #ffffff;
+    cursor: pointer;
+    font-size: .8rem;
+    padding: 1%;
+}
+
+#image:hover::before {
+    padding: 1%;
+    border: 2px solid rgb(235, 157, 157);
+}
+
+#image:active::before {
+    background-color: rgb(235, 157, 157);
+}
+
+input[type="submit"] {
+    border: none;
+    color: #C0DBDE;
+    width: 30%;
+    font-size: 1.2rem;
+    background-color: #000000;
+}
+
+input[type="submit"]:hover {
+    color: #000000;
+    cursor: pointer;
+    background-color: rgb(235, 157, 157);
+}
+
+#div-termo {
+    display: inline-flex;
+    width: 80%;
+    margin: 2% 10%;
+    height: 3rem;
+}
+
+#div-termo input {
+    width: 4%;
+    margin: auto;
+}
+
+#div-termo label {
+    font-size: .9rem;
+    margin: auto;
+    text-align: start;
+    width: 90%;
+}
+
+#captcha {
+    margin: 3% 11% 0%;
+    width: 90%;
+    display: inline-flex;
+    height: 3rem;
+}
+
+.math {
+    width: 60%;
+}
+
+.math span {
+    font-size: 1.1rem;
+    margin: auto 2%;
+}
+
+#totalvalores {
+    width: 45%;
+    height: 1.3rem;
+    float: right;
+    margin: .111% 0 0%;
+}
+
+#enviarcaptcha {
+    cursor: pointer;
+    height: 1.3rem;
+    margin: .1% 5%;
+    border: #000 solid 0px;
+}
+
+#aviso {
+    margin: 5% 12%;
+    color: #dd0000;
+}
+
+/*main*/
+
+/*footer*/
+footer {
+    margin-top: 15%;
+}
+
+/*fim do footer*/
+
+/*media queries*/
+@media (min-width: 769px) and (max-width: 1204px) {
+
+    .form-section {
+        width: 60%;
+    }
+
+    footer {
+        margin-top: 25%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .form-section {
+        margin-top: 15%;
+        width: 90%;
+    }
+
+    footer p {
+        font-size: .8rem;
+    }
+
+    footer {
+        margin-top: 35%;
+    }
+
+
+}
+
+@media (max-width:480px) {
+    .form-section {
+        margin-top: 15%;
+        width: 90%;
+    }
+
+    .form-section {
+        width: 90%;
+    }
+
+    .form-section input {
+        width: 100%;
+    }
+
+    #captcha {
+        margin: 3% 0% 0%;
+        width: 100%;
+    }
+
+    .math {
+        width: 60%;
+    }
+
+    .math span {
+        font-size: .8rem;
+        margin: auto 2%;
+    }
+
+    #totalvalores {
+        width: 40%;
+    }
+
+    #aviso {
+        margin: 5% 12%;
+        color: #dd0000;
+    }
+
+    footer p {
+        font-size: .8rem;
+    }
+
+    footer {
+        margin-top: 35%;
+    }
+}
+
+/*media queries*/

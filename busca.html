@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <title>Aniversariantes</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/busca.css">
+</head>
+
+<body id="topo">
+    <header class="header">
+        <div class="header-logo"> <a href="https://grupomultiplica.com.br/">
+                <img src="img/logo-grupo-multiplica.png" alt="logo da Multiplica"></a>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a class="nav-a" href="index.html">Home</a></li>
+                <li><a class="nav-a" href="editar-cadastro.html">Editar cadastro</a></li>
+                <li><a href="cadastro.html"><button> Cadastre-se</button></a></li>
+                <li class="dropdown">
+                    <a class="dropbtn"></a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Home</a>
+                        <a href="editar-cadastro.html">Editar cadastro</a>
+                        <a href="cadastro.html"> Cadastre-se</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="search">
+            <div>
+                <label for="search">Buscar pessoa por:
+                    <select name="nome" id="select">
+                        <option selected="selected"  value="nome">Nome</option>
+                        <option value="data">Data de Nascimento</option>
+                    </select>
+                </label>
+                <div>
+                    <input type="text" name="input-busca" id="input-busca" placeholder="Busque pessoa pelo nome">
+                    <button id="busca">Buscar</button>
+                </div>
+                <div id="loading">Carregando pessoas cadastradas...</div>
+                <div id="section-busca"></div>
+            </div>
+        </section>
+    </main>
+    <section class="third-section">
+        <div>
+            <p>Registre-se para aparecer no nosso quadro de aniversariantes</p>
+        </div>
+        <div>
+            <a href="cadastro.html"><button> Clique aqui para se cadastrar</button> </a>
+        </div>
+    </section>
+    <footer>
+        <div id="footer-left">
+            <p>grupo p3</p>
+        </div>
+        <div id="footer-center">
+            <p><a href="#topo">Voltar ao topo</a></p>
+        </div>
+        <div id="footer-right">
+            <p>© grupo p3, Inc. 2021. Grupo Multiplica</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="module" src="js/busca/carrega-card-busca.js"></script>
+</body>
+
+</html>

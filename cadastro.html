@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <title>Aniversariantes</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-logo"> <a href="https://grupomultiplica.com.br/">
+                <img src="img/logo-grupo-multiplica.png" alt="logo da Multiplica"></a>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a class="nav-a" href="index.html">Home</a></li>
+                <li><a class="nav-a" href="busca.html">Buscar cadastro</a></li>
+                <li><a class="nav-a" href="editar-cadastro.html">Editar cadastro</a></li>
+                <li class="dropdown">
+                    <a class="dropbtn"></a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Home</a>
+                        <a href="busca.html"> Buscar cadastro</a>
+                        <a href="editar-cadastro.html">Editar cadastro</a>
+
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>CADASTRO</h1>
+        </section>
+        <section class="form-section">
+            <form id="form" method="post" action="./busca.html">
+                <div>
+                    <input name="nome" id="nome" type="text" id="nome" data-tipo="nome"
+                        placeholder=" Insira seu nome completo:" name="name" required data-nome>
+                    <span class="input-mensagem-erro"></span>
+                </div>
+                <div>
+                    <input name="cpf" type="number" id="cpf" data-tipo="cpf"
+                        placeholder=" Insira seu CPF com 11 dígitos:(apenas números)" name="cpf" data-cpf>
+                    <span class="input-mensagem-erro"></span>
+                </div>
+                <div>
+                    <input placeholder="Insira sua data de nascimento" data-tipo="date" type="text" id="datebirth"
+                        name="date" onfocus="typeTextToDate()" onblur="typeDateToText()" required data-data>
+                    <span class="input-mensagem-erro"></span>
+                </div>
+                <div>
+                    <input type="email" id="email" data-tipo="email" placeholder=" Insira seu e-mail:" name="email"
+                        data-email>
+                    <span class="input-mensagem-erro"></span>
+                </div>
+                <input type="file" accept="image/*" id="image" placeholder=" Selecione uma foto do seu dispositivo"
+                    name="image" value="Enviar" data-foto>
+                <div id="div-termo"> <input type="checkbox" id="termo" name="termo" required>
+                    <label for="termo">Declaro que aceito enviar meus <strong href="">dados pessoais</strong>.
+                    </label>
+                </div>
+                <div id="captcha">
+                    <div class="math">
+                        <span id="valor1"></span>
+                        <span> + </span>
+                        <span id="valor2"></span>
+                        <span> =</span>
+                        <input id="totalvalores" type="text" name="totalvalores" required="required"
+                            placeholder="digite a soma">
+                    </div>
+                    <button id="enviarcaptcha" type="submit">Validar</button>
+                </div>
+                <p id="aviso"></p>
+
+                <input type="submit" value="Enviar" name="Enviar" />
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div id="footer-left">
+            <p>grupo p3</p>
+        </div>
+        <div id="footer-right">
+            <p>© grupo p3, Inc. 2021. Grupo Multiplica</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./js/cadastro/datatotext.js"></script>
+    <script type="module" src="./js/cadastro/valida.js"></script>
+    <script type="module" src="./js/cadastro/cadastro-de-pessoa.js"></script>
+    <script type="text/javascript" src="./js/cadastro/captcha.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <title>Aniversariantes</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/editar.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-logo"> 
+            <a href="https://grupomultiplica.com.br/">
+                <img src="img/logo-grupo-multiplica.png" alt="logo da Multiplica"></a>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a class="nav-a" href="index.html">Home</a></li>
+                <li><a class="nav-a" href="busca.html">Buscar cadastro</a></li>
+                <li><a href="cadastro.html"><button> Cadastre-se</button></a></li>
+                <li class="dropdown">
+                    <a class="dropbtn"></a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Home</a>
+                        <a href="busca.html">Buscar cadastro</a>
+                        <a href="cadastro.html"> Cadastre-se</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Buscar cadastro para alteração:</h1>
+        </section>
+        <!-- action="./cadastro-edicao.html">-->
+        <section class="buscaCPF">
+            <div>
+                <input name="cpf" type="number" id="cpf" data-tipo="cpf" id="cpf" required data-cpf
+                    placeholder=" Insira seu CPF com 11 dígitos: (apenas números)">
+                <button id="busca">Buscar</button>
+            </div>
+        </section>
+        <section id="mostra-infos">
+            <!---->
+            <div class="card">
+                <div class="description">
+                    <p></p><br>
+                    <p> </p><br>
+                    <p></p>
+                </div>
+                <img class="img" src='' title="" />
+            </div>
+        </section>
+        <button id="exclusao">Excluir cadastro</button>
+        <section class="form-section">
+            <form id="form" method="put">
+                <h2>Alterar dados do cadastro:</h2>
+                <div>
+                    <input name="nome" id="nome" type="text" id="nome" data-tipo="nome"
+                        placeholder=" Insira seu nome completo:" name="name" required data-nome>
+                    <span class="input-mensagem-erro"></span>
+                </div>
+                <div>
+                    <input placeholder="Insira sua data de nascimento" data-tipo="date" type="text" id="datebirth"
+                        name="date" onfocus="typeTextToDate()" onblur="typeDateToText()" required data-data>
+                    <span class="input-mensagem-erro"></span>
+                </div>
+                <div>
+                    <input type="email" id="email" data-tipo="email" required placeholder=" Insira seu e-mail:"
+                        name="email" data-email>
+                    <span class="input-mensagem-erro"></span>
+                </div>
+                <input type="file" accept="image/*" id="image" placeholder=" Selecione uma foto do seu dispositivo"
+                    name="image" value="Enviar" data-foto>
+                <input id="enviar" type="submit" value="Enviar" name="Enviar" />
+            </form>
+        </section>
+    </main>
+    <footer id="footer-editar">
+        <div id="footer-left">
+            <p>grupo p3</p>
+        </div>
+        <div id="footer-right">
+            <p>© grupo p3, Inc. 2021. Grupo Multiplica</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./js/cadastro/datatotext.js"></script>
+    <script type="module" src="./js/cadastro/valida.js"></script>
+    <script type="module" src="./js/edita-deleta/editar-deletar.js"></script>
+</body>
+
+</html>

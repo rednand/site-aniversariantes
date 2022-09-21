@@ -1,0 +1,242 @@
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+/*main*/
+main {
+    background: url('../img/backgroundbusca2.png')no-repeat;
+    background-size: cover;
+    background-position: 70% 10%;
+    width: 100%;
+    min-height: 45rem;
+}
+
+.search {
+    width: 80%;
+    margin: 3% auto;
+    text-align: start;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+select {
+    margin-top: 5%;
+    font-family: Helvetica;
+    width: auto;
+    border: none;
+    font-weight: bold;
+    border-bottom: 3px solid #000000;
+    background-color: rgb(235, 157, 157, 0.01);
+    font-size: 1.3rem;
+}
+
+#select>option {
+    background-color: #000000;
+    color: #C0DBDE;
+}
+
+#select>option:checked {
+    background-color: #000000;
+    color: #C0DBDE;
+}
+
+.search input {
+    margin: 1% 0;
+    width: 40%;
+    height: 2rem;
+}
+
+.search button {
+    width: 9rem;
+    height: 2.4rem;
+    margin: 1%;
+    background-color: black;
+    border: none;
+    color: #C0DBDE;
+    font-size: 1.2rem;
+    background-color: #000000;
+}
+
+.search button:hover {
+    color: #000000;
+    cursor: pointer;
+    background-color: rgb(235, 157, 157);
+}
+
+#loading {
+    margin: 5% 0;
+    font-size: 3rem;
+}
+
+/*fim do main*/
+
+/*third-section*/
+.third-section {
+    float: right;
+    border-top: 10px solid #ffffff;
+    position: relative;
+    bottom: 0;
+    margin-top: 0;
+}
+
+/*fim da third-section*/
+
+/*footer*/
+footer {
+    float: left;
+}
+
+/*fim do footer*/
+/*media-queries*/
+
+@media (min-width: 769px) and (max-width: 1204px) {
+
+    .search {
+        width: 90%;
+    }
+
+    main {
+        min-height: 35rem;
+    }
+
+    #loading {
+        margin-top: 10%;
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    main {
+        background: url('../img/backgroundbuscamedia.png')no-repeat;
+        background-size: cover;
+        background-position: 10% 100%;
+        width: 100%;
+        min-height: 45rem;
+        background-position: 95% 10%;
+        min-height: 35rem;
+    }
+
+    .header-nav>ul>li:first-child>a,
+    .header-nav>ul>li:nth-child(2)>a {
+        display: none;
+    }
+
+    .header-nav>ul>li.dropdown {
+        display: inline-flex;
+    }
+
+    .search {
+        width: 90%;
+        font-size: 1.5rem;
+        margin-top: 12%;
+    }
+
+    .search input {
+        margin: 2% 0;
+        width: 70%;
+    }
+
+    .search button {
+        margin: 1% 0;
+        width: 30%;
+    }
+
+    .third-section div {
+        width: 40%;
+    }
+
+    .dropbtn {
+        display: block;
+    }
+
+    #loading {
+        margin-top: 10%;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 481px) {
+    main {
+        background: url('../img/backgroundbuscamobile.png')no-repeat;
+        background-size: cover;
+        background-position: 45% 10%;
+        width: 100%;
+        min-height: 45rem;
+    }
+
+    .header-nav li.dropdown {
+        padding: 12%;
+    }
+
+    .header-nav>ul>li:first-child>a,
+    .header-nav>ul>li:nth-child(2)>a {
+        display: none;
+    }
+
+    .header-nav>ul>li.dropdown {
+        display: inline-flex;
+    }
+
+    .search {
+        text-align: center;
+        font-size: 1.3rem;
+        margin-top: 15%;
+    }
+
+    .search input {
+        margin: 10% 0 auto;
+        width: 95%;
+        height: 1.6rem;
+    }
+
+    #select {
+        font-size: 1rem;
+    }
+
+    .search button {
+        height: 2rem;
+        font-size: 1.2rem;
+    }
+
+    #loading {
+        margin: 30% 0;
+        font-size: 1.5rem;
+    }
+
+    .third-section {
+        width: 100%;
+        display: inline-block;
+    }
+
+    .third-section div {
+        width: 90%;
+        margin: 5% auto;
+    }
+
+    .third-section div p {
+        text-align: center;
+    }
+
+    .third-section>div:last-child button {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .third-section>div:last-child {
+        width: 80%;
+        margin: 10%;
+    }
+
+    footer p {
+        font-size: .8rem;
+    }
+}
+
+/*media-queries*/

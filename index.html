@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <title>Aniversariantes</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header id="topo" class="header">
+        <div class="header-logo">
+            <a href="https://grupomultiplica.com.br/">
+                <img src="img/logo-grupo-multiplica.png" alt="logo da Multiplica">
+            </a>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a class="nav-a" href="busca.html">Buscar cadastro</a></li>
+                <li><a class="nav-a" href="editar-cadastro.html">Editar cadastro</a></li>
+                <li><a href="cadastro.html"><button> Cadastre-se</button></a></li>
+                <li class="dropdown">
+                    <a class="dropbtn"></a>
+                    <div class="dropdown-content">
+                        <a href="busca.html">Buscar cadastro</a>
+                        <a href="editar-cadastro.html">Editar cadastro</a>
+                        <a href="cadastro.html"> Cadastre-se</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="first-section">
+            <div>
+                <h1 id="date"></h1><br>
+                <select name="select-birthday" id="select-birthday" onchange="alteraPeriodo();">
+                    <option selected="selected" value="today" name="second-section">
+                        <h2>Veja abaixo os aniversariantes de hoje:</h2>
+                    </option>
+                    <option value="month" name="month-section">
+                        <h2>Veja abaixo os aniversariantes do mês:</h2>
+                    </option>
+                </select>
+            </div>
+            <div>
+                <p id="p-feliz">Feliz</p>
+                <p>aniversário </p>
+            </div>
+        </section>
+        <div id="preload"></div>
+        <section class="second-section">
+            <div id="second-section">
+                <div class="div-sem-aniver">
+                    <h1>Parece que não temos aniversariantes hoje. <br> Selecione os aniversariantes do mês.
+                    </h1>
+                    <img src="img/sad-cat.gif" alt="imagem de gato triste em uma comemoraçao">
+                </div>
+        </section>
+        <section id="month-section">
+            <div class="div-sem-aniver-month">
+                <h1>Não temos aniversariantes esse mês. </h1>
+                <img src="img/sad-cat.gif" alt="imagem de gato triste em uma comemoraçao">
+            </div>
+        </section>
+        <section class="third-section">
+            <div>
+                <p>Registre-se para aparecer no nosso quadro de aniversariantes:</p>
+            </div>
+            <div>
+                <a href="cadastro.html"><button> Clique aqui para se cadastrar</button> </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="footer-left">
+            <p>grupo p3</p>
+        </div>
+        <div id="footer-center">
+            <p><a href="#topo">Voltar ao topo</a></p>
+        </div>
+        <div id="footer-right">
+            <p>© grupo p3, Inc. 2021. Grupo Multiplica</p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/index/data-day.js"></script>
+    <script type="module" src="js/index/carrega-card-index.js"></script>
+</body>
+
+</html>
